@@ -1,0 +1,24 @@
+.logo {
+  display: flex;
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo__title {
+  font-family: $font-title;
+  font-weight: bold;
+  color: $white;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.logo__subtitle {
+  font-family: $font-logo;
+  font-weight: 500;
+  color: $logo-gray;
+  font-size: 12px;
+  line-height: 14px;
+}
