@@ -1,0 +1,224 @@
+.page-footer {
+  position: relative;
+  font-family: $font;
+  font-size: 15px;
+  line-height: 25px;
+  padding-top: 50px;
+  background-color: $light-gray;
+  flex: 0 0 auto;
+
+  &::before {
+    @include pseudo;
+    width: 100%;
+    height: 1px;
+    bottom: 51px;
+    left: 0;
+    background-color: $border-gray;
+    opacity: 0.2;
+
+    @media (max-width: $tablet-max-width) {
+      bottom: 58px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      width: 0;
+    }
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding: 0;
+  }
+}
+
+.page-footer__container {
+  max-width: $desktop-container-width;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (max-width: $desktop-container-width) {
+    max-width: none;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 60px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 45px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 9px;
+  }
+}
+
+.page-footer__title {
+  text-transform: uppercase;
+  font-family: $font-title;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  margin-bottom: 25px;
+}
+
+.page-footer__about {
+  margin-left: 2px;
+  margin-top: 15px;
+  margin-right: 14.6%;
+
+  @media (max-width: $desktop-container-width) {
+    margin-right: 4.6%;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 19px;
+    padding-bottom: 25px;
+    margin: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 23px;
+    padding-left: 25px;
+    border-bottom: 1px solid $border-gray-op;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 45px;
+    padding-bottom: 46px;
+    border: none;
+  }
+}
+
+.page-footer__logo {
+  margin-bottom: 54px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__copyright-top {
+  display: none;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: $dark-gray-op;
+  text-transform: uppercase;
+
+  @media (max-width: $tablet-max-width) {
+    display: block;
+    padding-left: 12px;
+    padding-top: 16px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 0;
+    padding-top: 26px;
+  }
+}
+
+.page-footer__social {
+  @media (max-width: $tablet-max-width) {
+    margin-top: 12px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-top: 33px;
+  }
+}
+
+.page-footer__nav {
+  margin-right: 4.3%;
+
+  @media (max-width: $tablet-max-width) {
+    margin-right: 18.3%;
+    margin-top: 23px;
+    margin-left: 26px;
+  }
+}
+
+.page-footer__contacts {
+  @media (max-width: $tablet-max-width) {
+    margin-top: 23px;
+  }
+}
+
+.page-footer__copyright {
+  width: 100%;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: $dark-gray-op;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet-max-width) {
+    justify-content: space-between;
+    padding-left: 26px;
+    padding-right: 23px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+}
+
+.page-footer__link {
+  font-size: 15px;
+  line-height: 25px;
+  color: $dark-gray-op;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.page-footer__terms {
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  margin-right: 28.7%;
+
+  @media (max-width: $desktop-container-width) {
+    margin-right: 3%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 8px;
+  }
+}
+
+.page-footer__rights {
+  margin-right: 5.3%;
+
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.page-footer__copyright-bottom {
+  margin-right: 10.3%;
+
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}

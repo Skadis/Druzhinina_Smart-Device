@@ -5,6 +5,8 @@
 .logo__text {
   display: flex;
   flex-direction: column;
+  margin-left: 16px;
+  margin-top: 7px;
 }
 
 .logo__title {
@@ -15,10 +17,31 @@
   line-height: 29px;
 }
 
+.logo__title--dark {
+  color: $title-dark;
+}
+
 .logo__subtitle {
   font-family: $font-logo;
   font-weight: 500;
   color: $logo-gray;
   font-size: 12px;
   line-height: 14px;
+}
+
+.logo--header {
+  margin-left: 3px;
+}
+
+.logo--header .logo__text {
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
+}
+
+.logo--header .logo__image {
+  @media (max-width: $mobile-max-width) {
+    height: 38px;
+    width: 38px;
+  }
 }

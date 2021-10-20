@@ -1,0 +1,20 @@
+.container {
+  max-width: $desktop-container-width;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (max-width: $desktop-container-width) {
+    max-width: none;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding-left: 23px;
+    padding-right: 22px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

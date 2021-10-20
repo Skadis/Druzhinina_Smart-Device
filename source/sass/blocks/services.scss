@@ -1,0 +1,220 @@
+.services {
+  background-color: $dark-gray;
+  padding-top: 59px;
+  padding-bottom: 128px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 50px;
+    padding-bottom: 78px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 64px;
+  }
+}
+
+.services__title {
+  font-family: $font-title;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+  padding-left: 125px;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 32px;
+    line-height: 140.62%;
+    margin: 0;
+    padding-left: 2px;
+    width: 85%;
+    margin-bottom: 31px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 28px;
+    line-height: 140.62%;
+    width: 100%;
+    margin-left: 9px;
+    margin-bottom: 22px;
+  }
+}
+
+.services__list {
+  @include clear-list;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 125px;
+
+  @media (max-width: $tablet-max-width) {
+    flex-direction: column;
+    padding-left: 4px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 0;
+  }
+}
+
+.services__item {
+  width: 28.6%;
+  margin-right: 30px;
+  overflow: hidden;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 26px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.services__link {
+  display: block;
+  height: 620px;
+  position: relative;
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 0.4;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    bottom: 0;
+    right: 0;
+    background-color: $blue;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 31px 26px;
+    z-index: 100;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    height: 256px;
+  }
+}
+
+.services__link--production {
+  background-image: url("../img/production-desktop.png");
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/production-desktop@2x.png");
+    background-size: contain;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    background-image: url("../img/production-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/production-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    background-image: url("../img/production-mobile.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/production-mobile@2x.png");
+    }
+  }
+}
+
+.services__link--assembly {
+  background-image: url("../img/assembly-desktop.png");
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/assembly-desktop@2x.png");
+    background-size: contain;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    background-image: url("../img/assembly-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/assembly-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    background-image: url("../img/assembly-mobile.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/assembly-mobile@2x.png");
+    }
+  }
+}
+
+.services__link--accessories {
+  background-image: url("../img/accessories-desktop.png");
+  background-size: cover;
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/accessories-desktop@2x.png");
+    background-size: contain;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    background-image: url("../img/accessories-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/accessories-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    background-image: url("../img/accessories-mobile.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/accessories-mobile@2x.png");
+    }
+  }
+}
+
+
+.services__link--accessories .services__subtitle {
+  padding-top: 50px;
+}
+
+.services__subtitle {
+  font-family: $font-title;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+  width: 58%;
+  padding-top: 49px;
+  padding-left: 44px;
+
+  @media (max-width: $desktop-max-width) {
+    width: 29%;
+    padding-top: 40px;
+    padding-left: 44px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 69%;
+    padding-top: 24px;
+    padding-left: 35px;
+  }
+}

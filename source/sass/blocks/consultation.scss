@@ -1,0 +1,239 @@
+.consultation {
+  background-color: $blue;
+  background-image: url("../img/consultation-bg.png");
+  background-position: 175px -59px;
+  background-repeat: no-repeat;
+
+
+  @media (max-width: $desktop-max-width) {
+    background-position: 0 50%;
+    background-size: 97%;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    background-image: none;
+  }
+}
+
+.consultation__wrapper {
+  padding-left: 38.1%;
+  padding-top: 92px;
+  padding-right: 103px;
+  padding-bottom: 113px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-left: 89px;
+    padding-top: 80px;
+    padding-right: 50px;
+    padding-bottom: 103px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 15px;
+    padding-top: 31px;
+    padding-right: 15px;
+    padding-bottom: 41px;
+  }
+}
+
+.consultation__title {
+  font-family: $font-title;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+  margin: 0;
+  margin-bottom: 8px;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 32px;
+    line-height: 140.62%;
+    margin-bottom: 17px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 28px;
+    line-height: 140.62%;
+    margin-bottom: 12px;
+  }
+}
+
+.consultation__form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 51px;
+  margin-left: 3px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-top: 54px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column;
+    margin-top: 26px;
+    margin-left: 0;
+  }
+}
+
+.consultation__text {
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  margin-top: 0;
+  margin-left: 4px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 0;
+  }
+}
+
+.consultation__field {
+  width: 44.68%;
+  margin-bottom: 41px;
+  margin-right: 5.2%;
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+    margin-bottom: 32px;
+    margin-right: 0;
+  }
+}
+
+.consultation__input {
+  background-color: $light-blue;
+  border: none;
+  padding-top: 17px;
+  padding-left: 16px;
+  padding-bottom: 18px;
+  width: 100%;
+
+  &::placeholder {
+    font-family: $font;
+    color: $white;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $hover-light-blue;
+    color: $white;
+  }
+}
+
+.consultation__field--question {
+  width: 100%;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 26px;
+  }
+}
+
+.consultation__field--question .consultation__input {
+  padding-top: 10px;
+  height: 154px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 14px;
+    height: 161px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 12px;
+    height: 104px;
+  }
+}
+
+.consultation__button {
+  font-family: $font-title;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid $white;
+  border-radius: 5px;
+  color: $white;
+  padding-right: 81px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  padding-left: 78px;
+  margin-right: 11.6%;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $blue;
+    border-color: $light-blue;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 15px;
+    padding-bottom: 14px;
+    padding-left: 85px;
+    padding-right: 83px;
+    margin-right: 73px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+  }
+}
+
+.consultation__personal-data {
+  width: 37%;
+  margin-top: 4px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-top: 6px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+    padding-left: 34px;
+    margin-top: 27px;
+  }
+}
+
+.consultation__checkbox-label {
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+  opacity: 0.8;
+}
+
+.consultation__checkbox + .consultation__checkbox-label::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: -31px;
+  width: 16px;
+  height: 16px;
+  border: solid 1px $white;
+
+  @media (max-width: $tablet-max-width) {
+    top: 2px;
+    left: -33px;
+  }
+}
+
+.consultation__checkbox:checked + .consultation__checkbox-label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -29px;
+  width: 10px;
+  height: 6px;
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}

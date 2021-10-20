@@ -1,0 +1,137 @@
+.about-us__wrapper {
+  padding-left: 16.4%;
+  position: relative;
+  padding-bottom: 111px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 362px;
+    height: 315px;
+    background: url("../img/year.png") no-repeat;
+    top: 4px;
+    left: 7.3%;
+    z-index: -1;
+
+    @media (max-width: $tablet-max-width) {
+      background-size: contain;
+      height: 359px;
+      left: -6px;
+      top: 0;
+      padding-left: 27.4%;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      background: none;
+    }
+  }
+
+  @media (max-width: $desktop-max-width) {
+    &::before {
+      left: -6px;
+    }
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding-left: 27.6%;
+    padding-bottom: 85px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 67px;
+  }
+}
+
+.about-us__title {
+  font-family: $font-title;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $gray;
+  margin-bottom: 20px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-top: 0;
+    margin-bottom: 27px;
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 0;
+    width: 100%;
+    font-size: 28px;
+    margin-bottom: 21px;
+  }
+}
+
+.about-us__text {
+  font-size: 16px;
+  line-height: 22px;
+  color: $gray;
+  width: 87%;
+  margin-bottom: 19px;
+
+  &:last-of-type {
+    margin-bottom: 42px;
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 31px;
+    }
+  }
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 16px;
+    line-height: 22px;
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 38px;
+  }
+}
+
+.about-us__desktop-text {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.about-us__text--cut {
+  @media (max-width: $tablet-max-width) {
+    &::after {
+      content: "..";
+    }
+  }
+}
+
+.about-us__link {
+  font-family: $font-title;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $blue;
+  border: 1px solid $blue;
+  border-radius: 5px;
+  padding-top: 12px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 12px;
+  display: block;
+  width: 180px;
+  background-color: $white;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $blue;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,95 @@
+.nav {
+  @media (max-width: $mobile-max-width) {
+    position: relative;
+    border-top: 1px solid $border-gray-op;
+    border-bottom: 1px solid $border-gray-op;
+    width: 100%;
+    margin: 0;
+    padding-left: 16px;
+    padding-top: 14px;
+    padding-bottom: 0;
+  }
+}
+
+.nav__list {
+  @include clear-list;
+  column-count: 2;
+  column-width: 291px;
+
+  @media (max-width: $desktop-container-width) {
+    column-width: auto;
+    max-width: auto;
+    column-count: auto;
+  }
+}
+
+.nav__item {
+  display: block;
+}
+
+.nav--close .nav__list {
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
+}
+
+.nav--open .nav__list {
+  @media (max-width: $mobile-max-width) {
+    display: block;
+  }
+}
+
+.nav__toggle {
+  display: none;
+
+  @media (max-width: $mobile-max-width) {
+
+    display: block;
+    position: absolute;
+    top: 29px;
+    right: 17px;
+    width: 16px;
+    height: 16px;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+  }
+}
+
+.nav--close .nav__toggle {
+  @media (max-width: $mobile-max-width) {
+    &::before,
+    &::after {
+      content: "";
+      width: 16px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: $border-gray;
+    }
+
+    &::before {
+      transform: rotate(90deg);
+    }
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.nav--open .nav__toggle {
+  @media (max-width: $mobile-max-width) {
+    &::before {
+      content: "";
+      width: 16px;
+      height: 1px;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      background-color: $border-gray;
+      transform: rotate(180deg);
+    }
+  }
+}

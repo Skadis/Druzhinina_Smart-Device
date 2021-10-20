@@ -1,0 +1,19 @@
+.social {
+  @include clear-list;
+  display: flex;
+}
+
+.social__item:not(:last-of-type) {
+  margin-right: 16px;
+}
+
+.social__link {
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
