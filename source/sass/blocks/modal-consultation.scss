@@ -1,13 +1,18 @@
-.modal-consultation {
+.modal-consultation__wrapper {
+  position: fixed;
   background-color: $blue;
   max-width: 490px;
   height: 605px;
   top: -309px;
   padding-top: 31px;
   padding-left: 39px;
+  margin: auto;
+  right: 0;
+  bottom: 0;
+  left: -1px;
 }
 
-.modal-consultation__title {
+.modal-consultation h2 {
   font-family: $font-title;
   font-weight: normal;
   font-size: 28px;
@@ -17,7 +22,7 @@
   margin-bottom: 12px;
 }
 
-.modal-consultation__text {
+.modal-consultation p {
   font-size: 16px;
   line-height: 22px;
   color: $white;
@@ -26,7 +31,7 @@
   width: 88%;
 }
 
-.modal-consultation__form {
+.modal-consultation form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -39,7 +44,8 @@
   margin-bottom: 31px;
 }
 
-.modal-consultation__input {
+.modal-consultation__field input,
+.modal-consultation__field textarea {
   background-color: $light-blue;
   border: none;
   padding-top: 17px;
@@ -92,7 +98,7 @@
   }
 }
 
-.modal-consultation__field--question .modal-consultation__input {
+.modal-consultation__field--question textarea {
   padding-top: 10px;
   height: 104px;
 }
@@ -101,7 +107,7 @@
   margin-bottom: 28px;
 }
 
-.modal-consultation__checkbox-label {
+.modal-consultation__personal-data label {
   position: relative;
   font-size: 14px;
   line-height: 16px;
@@ -109,7 +115,7 @@
   opacity: 0.8;
 }
 
-.modal-consultation__checkbox + .modal-consultation__checkbox-label::before {
+.modal-consultation__personal-data input + label::before {
   content: "";
   position: absolute;
   top: 1px;
@@ -124,7 +130,7 @@
   }
 }
 
-.modal-consultation__checkbox:checked + .modal-consultation__checkbox-label::after {
+.modal-consultation__personal-data input:checked + label::after {
   content: "";
   position: absolute;
   top: 6px;

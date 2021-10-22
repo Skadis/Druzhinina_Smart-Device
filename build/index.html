@@ -15,7 +15,7 @@
 
   <header class="page-header">
     <div class="page-header__wrapper container">
-      <a href="#" class="logo logo--header">
+      <a class="logo logo--header">
         <svg class="logo__image" width="52" height="52" aria-label="Логотип">
           <use xlink:href="img/sprite.svg#logo"></use>
         </svg>
@@ -47,8 +47,14 @@
 
     <section class="main-screen">
       <div class="main-screen__wrapper container">
-        <h2 class="main-screen__title">Печатные платы</h2>
-        <p class="main-screen__text">Производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <h2>Печатные платы</h2>
+        <p>Производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <picture>
+          <source type="image/webp" srcset="img/main-screen-img.webp 1x, img/main-screen-img@2x.webp 2x">
+
+          <!-- 1х: 705px; 2x: 1410px -->
+          <img class="main-screen__img" width="705" height="515" src="img/main-screen-img.png" srcset="img/main-screen-img@2x.png 2x" alt="Платы">
+        </picture>
         <a class="main-screen__link" href="#consultation-section">
           <span class="main-screen__link-text main-screen__link-text--desktop">Получить бесплатную консультацию</span>
           <span class="main-screen__link-text main-screen__link-text--mobile">Бесплатная консультация</span>
@@ -65,29 +71,29 @@
             <svg class="features__icon" width="29" height="35">
               <use xlink:href="/img/sprite.svg#operational-terms"></use>
             </svg>
-            <h3 class="features__title">Оперативные сроки</h3>
-            <p class="features__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+            <h3>Оперативные сроки</h3>
+            <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
           </li>
           <li class="features__item features__item--providers">
             <svg class="features__icon" width="35" height="35">
               <use xlink:href="/img/sprite.svg#providers"></use>
             </svg>
-            <h3 class="features__title">Крупные поставщики</h3>
-            <p class="features__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+            <h3>Крупные поставщики</h3>
+            <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
           </li>
           <li class="features__item features__item--confidentiality">
             <svg class="features__icon" width="36" height="31">
               <use xlink:href="/img/sprite.svg#confidentiality"></use>
             </svg>
-            <h3 class="features__title">Полная конфиденциальность</h3>
-            <p class="features__text">По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
+            <h3>Полная конфиденциальность</h3>
+            <p>По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
           </li>
           <li class="features__item features__item--price">
             <svg class="features__icon" width="35" height="35">
               <use xlink:href="/img/sprite.svg#price"></use>
             </svg>
-            <h3 class="features__title">Персонализация стоимости</h3>
-            <p class="features__text">Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+            <h3>Персонализация стоимости</h3>
+            <p>Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
           </li>
         </ul>
       </div>
@@ -95,9 +101,9 @@
 
     <section class="about-us">
       <div class="about-us__wrapper container">
-        <h2 class="about-us__title">О компании</h2>
-        <p class="about-us__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-        <p class="about-us__text about-us__text--cut">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about-us__desktop-text"> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+        <h2>О компании</h2>
+        <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+        <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about-us__desktop-text"> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
         <a class="about-us__link" href="#">Подробнее</a>
       </div>
     </section>
@@ -106,21 +112,21 @@
 
     <section class="services">
       <div class="container">
-        <h2 class="services__title">Service Device предлагает следующие товары и услуги</h2>
+        <h2>Service Device предлагает следующие товары и услуги</h2>
         <ul class="services__list">
           <li class="services__item">
             <a class="services__link services__link--production" href="#">
-              <h3 class="services__subtitle">Производство печатных плат</h3>
+              <h3>Производство печатных плат</h3>
             </a>
           </li>
           <li class="services__item">
             <a class="services__link services__link--assembly" href="#">
-              <h3 class="services__subtitle">Монтаж печатных плат</h3>
+              <h3>Монтаж печатных плат</h3>
             </a>
           </li>
           <li class="services__item">
             <a class="services__link services__link--accessories" href="#">
-              <h3 class="services__subtitle">Комплектующие для светотехники</h3>
+              <h3>Комплектующие для светотехники</h3>
             </a>
           </li>
         </ul>
@@ -129,25 +135,25 @@
 
     <section class="consultation" id="consultation-section">
     <div class="consultation__wrapper container">
-      <h2 class="consultation__title">Остались вопросы? Задайте их нам!</h2>
-      <p class="consultation__text">Мы проконсультируем Вас бесплатно</p>
+      <h2>Остались вопросы? Задайте их нам!</h2>
+      <p>Мы проконсультируем Вас бесплатно</p>
       <form method="POST" action="https://echo.htmlacademy.ru" class="consultation__form">
         <div class="consultation__field consultation__field--name">
-          <input class="consultation__input" type="text" id="name" placeholder="Имя" required="">
+          <input type="text" id="name" placeholder="Имя" required="">
           <label class="visually-hidden" for="name">Имя</label>
         </div>
         <div class="consultation__field consultation__field--phone">
-          <input class="consultation__input" type="tel" id="phone" placeholder="Телефон" pattern="^[0-9]+$" required="">
+          <input type="tel" id="phone" placeholder="Телефон" pattern="^[0-9]+$" required="">
           <label class="visually-hidden" for="phone">Номер телефона</label>
         </div>
         <div class="consultation__field consultation__field--question">
-          <textarea class="consultation__input" id="question" cols="30" rows="1" placeholder="Ваш вопрос" required=""></textarea>
+          <textarea id="question" cols="30" rows="1" placeholder="Ваш вопрос" required=""></textarea>
           <label class="visually-hidden" for="question">Ваш вопрос</label>
         </div>
         <button type="submit" class="consultation__button">Задать вопрос</button>
         <div class="consultation__personal-data">
-          <input class="visually-hidden consultation__checkbox" type="checkbox" id="personal-data" required="" checked="">
-          <label class="consultation__checkbox-label" for="personal-data"> Я согласен на обработку персональных данных</label>
+          <input class="visually-hidden" type="checkbox" id="personal-data" required="" checked="">
+          <label for="personal-data"> Я согласен на обработку персональных данных</label>
         </div>
       </form>
     </div>
@@ -159,7 +165,7 @@
     <div class="page-footer__container">
       <div class="page-footer__wrapper">
         <div class="page-footer__about">
-          <a href="#" class="page-footer__logo logo">
+          <a class="page-footer__logo logo">
             <svg class="logo__image" width="52" height="52" aria-label="Логотип">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
@@ -252,30 +258,32 @@
 
   <section class="modal modal-consultation">
     <div class="modal__overlay">
-      <button class="modal__close-button" type="button" aria-label="Закрыть"></button>
+      <div class="modal-consultation__wrapper">
+        <button class="modal__close-button" type="button" aria-label="Закрыть"></button>
 
-      <h2 class="modal-consultation__title">Закажите звонок</h2>
-      <p class="modal-consultation__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <h2>Закажите звонок</h2>
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
 
-      <form method="POST" action="https://echo.htmlacademy.ru" class="modal-consultation__form">
-        <div class="modal-consultation__field modal-consultation__field--name">
-          <input class="modal-consultation__input" type="text" id="modal-name" placeholder="Имя" required="">
-          <label class="visually-hidden" for="modal-name">Имя</label>
-        </div>
-        <div class="modal-consultation__field modal-consultation__field--phone">
-          <input class="modal-consultation__input" type="tel" id="modal-phone" placeholder="Телефон" pattern="^[0-9]+$" required="">
-          <label class="visually-hidden" for="modal-phone">Номер телефона</label>
-        </div>
-        <div class="modal-consultation__field modal-consultation__field--question">
-          <textarea class="modal-consultation__input" id="modal-question" cols="30" rows="1" placeholder="Ваш вопрос" required=""></textarea>
-          <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
-        </div>
-        <button type="submit" class="modal-consultation__button">Отправить</button>
-        <div class="modal-consultation__personal-data">
-          <input class="visually-hidden modal-consultation__checkbox" type="checkbox" id="modal-personal-data" required="" checked="">
-          <label class="modal-consultation__checkbox-label" for="modal-personal-data"> Я согласен на обработку персональных данных</label>
-        </div>
-      </form>
+        <form method="POST" action="https://echo.htmlacademy.ru">
+          <div class="modal-consultation__field modal-consultation__field--name">
+            <input type="text" id="modal-name" placeholder="Имя" required="">
+            <label class="visually-hidden" for="modal-name">Имя</label>
+          </div>
+          <div class="modal-consultation__field modal-consultation__field--phone">
+            <input type="tel" id="modal-phone" placeholder="Телефон" pattern="^[0-9]+$" required="">
+            <label class="visually-hidden" for="modal-phone">Номер телефона</label>
+          </div>
+          <div class="modal-consultation__field modal-consultation__field--question">
+            <textarea id="modal-question" cols="30" rows="1" placeholder="Ваш вопрос" required=""></textarea>
+            <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
+          </div>
+          <button type="submit" class="modal-consultation__button">Отправить</button>
+          <div class="modal-consultation__personal-data">
+            <input class="visually-hidden" type="checkbox" id="modal-personal-data" required="" checked="">
+            <label for="modal-personal-data"> Я согласен на обработку персональных данных</label>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 

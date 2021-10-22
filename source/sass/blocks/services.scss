@@ -13,7 +13,7 @@
   }
 }
 
-.services__title {
+.services h2 {
   font-family: $font-title;
   font-weight: normal;
   font-size: 36px;
@@ -118,7 +118,6 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/production-desktop@2x.png");
-    background-size: contain;
   }
 
   @media (max-width: $tablet-max-width) {
@@ -144,7 +143,6 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/assembly-desktop@2x.png");
-    background-size: contain;
   }
 
   @media (max-width: $tablet-max-width) {
@@ -171,7 +169,6 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/accessories-desktop@2x.png");
-    background-size: contain;
   }
 
   @media (max-width: $tablet-max-width) {
@@ -196,7 +193,7 @@
   padding-top: 50px;
 }
 
-.services__subtitle {
+.services h3 {
   font-family: $font-title;
   font-weight: normal;
   font-size: 20px;

@@ -4,6 +4,10 @@
   background-position: 175px -59px;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/consultation-bg@2x.png");
+    background-size: 1745px 765px;
+  }
 
   @media (max-width: $desktop-max-width) {
     background-position: 0 50%;
@@ -36,7 +40,7 @@
   }
 }
 
-.consultation__title {
+.consultation h2 {
   font-family: $font-title;
   font-weight: normal;
   font-size: 36px;
@@ -58,7 +62,7 @@
   }
 }
 
-.consultation__form {
+.consultation form {
   display: flex;
   flex-wrap: wrap;
   margin-top: 51px;
@@ -75,7 +79,7 @@
   }
 }
 
-.consultation__text {
+.consultation p {
   font-size: 16px;
   line-height: 22px;
   color: $white;
@@ -99,7 +103,8 @@
   }
 }
 
-.consultation__input {
+.consultation__field input,
+.consultation__field textarea {
   background-color: $light-blue;
   border: none;
   padding-top: 17px;
@@ -131,9 +136,10 @@
   }
 }
 
-.consultation__field--question .consultation__input {
+.consultation__field--question textarea {
   padding-top: 10px;
   height: 154px;
+  resize: none;
 
   @media (max-width: $tablet-max-width) {
     padding-top: 14px;
@@ -202,7 +208,7 @@
   }
 }
 
-.consultation__checkbox-label {
+.consultation__personal-data label {
   position: relative;
   font-size: 14px;
   line-height: 16px;
@@ -210,7 +216,7 @@
   opacity: 0.8;
 }
 
-.consultation__checkbox + .consultation__checkbox-label::before {
+.consultation__personal-data input + label::before {
   content: "";
   position: absolute;
   top: 1px;
@@ -225,7 +231,7 @@
   }
 }
 
-.consultation__checkbox:checked + .consultation__checkbox-label::after {
+.consultation__personal-data input:checked + label::after {
   content: "";
   position: absolute;
   top: 6px;

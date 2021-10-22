@@ -7,64 +7,75 @@
   const contacts = document.querySelector('.contacts');
   const contactsButton = contacts.querySelector('.contacts__toggle');
   const consultationButton = document.querySelector('.main-screen__link');
+  const scrollSection = document.querySelector('.consultation');
+  const contactsCloseClass = 'contacts--close';
+  const contactsOpenClass = 'contacts--open';
+  const navCloseClass = 'nav--close';
+  const navOpenClass = 'nav--open';
 
   navigation.classList.remove('nav--no-js');
   contacts.classList.remove('contacts--no-js');
-  navigation.classList.add('nav--close');
-  contacts.classList.add('contacts--close');
+  navigation.classList.add(navCloseClass);
+  contacts.classList.add(contactsCloseClass);
 
   navigationButton .addEventListener('click', () => {
-    if (navigation.classList.contains('nav--close') && contacts.classList.contains('contacts--open')) {
-      navigation.classList.add('nav--open');
-      navigation.classList.remove('nav--close');
-      contacts.classList.add('contacts--close');
-      contacts.classList.remove('contacts--open');
-    } else if (navigation.classList.contains('nav--open')) {
-      navigation.classList.add('nav--close');
-      navigation.classList.remove('nav--open');
+    if (navigation.classList.contains(navCloseClass) && contacts.classList.contains(contactsOpenClass)) {
+      navigation.classList.add(navOpenClass);
+      navigation.classList.remove(navCloseClass);
+      contacts.classList.add(contactsCloseClass);
+      contacts.classList.remove(contactsOpenClass);
+    } else if (navigation.classList.contains(navOpenClass)) {
+      navigation.classList.add(navCloseClass);
+      navigation.classList.remove(navOpenClass);
     } else {
-      navigation.classList.add('nav--open');
-      navigation.classList.remove('nav--close');
+      navigation.classList.add(navOpenClass);
+      navigation.classList.remove(navCloseClass);
     }
   });
 
   contactsButton.addEventListener('click', () => {
-    if (navigation.classList.contains('nav--open') && contacts.classList.contains('contacts--close')) {
-      navigation.classList.add('nav--close');
-      navigation.classList.remove('nav--open');
-      contacts.classList.add('contacts--open');
-      contacts.classList.remove('contacts--close');
-    } else if (contacts.classList.contains('contacts--open')) {
-      contacts.classList.add('contacts--close');
-      contacts.classList.remove('contacts--open');
+    if (navigation.classList.contains(navOpenClass) && contacts.classList.contains(contactsCloseClass)) {
+      navigation.classList.add(navCloseClass);
+      navigation.classList.remove(navOpenClass);
+      contacts.classList.add(contactsOpenClass);
+      contacts.classList.remove(contactsCloseClass);
+    } else if (contacts.classList.contains(contactsOpenClass)) {
+      contacts.classList.add(contactsCloseClass);
+      contacts.classList.remove(contactsOpenClass);
     } else {
-      contacts.classList.add('contacts--open');
-      contacts.classList.remove('contacts--close');
+      contacts.classList.add(contactsOpenClass);
+      contacts.classList.remove(contactsCloseClass);
     }
 
   });
 
-  consultationButton.addEventListener('click', (event) => {
-    const linkID = document.querySelector(consultationButton.getAttribute('href'));
-    event.preventDefault();
-    linkID.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+  if (scrollSection) {
+    consultationButton.addEventListener('click', (event) => {
+      const linkID = document.querySelector(consultationButton.getAttribute('href'));
+      event.preventDefault();
+      linkID.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     });
-  });
+  }
 })();
 
 (function () {
+
+  const consultationPhone = document.querySelector('.consultation__field--phone input');
+  const modalConsultationPhone = document.querySelector('.modal-consultation__field--phone input');
+  const matrix = '+7 (___) ___ ____';
+
   function setCursorPosition(pos, el) {
     el.focus();
     el.setSelectionRange(pos, pos);
   }
 
-  function mask(event) {
-    const matrix = '+7 (___) ___ ____';
+  function setMask(event) {
     let i = 0;
     const def = matrix.replace(/\D/g, '');
-    const val = event.target.value.replace(/\D/g, '');
+    let val = event.target.value.replace(/\D/g, '');
     if (def.length >= val.length) {
       val = def;
     }
@@ -87,19 +98,17 @@
       setCursorPosition(event.target.value.length, event.target);
     }
   }
-  const consultationPhone = document.querySelector('.consultation__field--phone .consultation__input');
-  const modalConsultationPhone = document.querySelector('.modal-consultation__field--phone .modal-consultation__input');
 
   if (consultationPhone) {
-    consultationPhone.addEventListener('input', mask, false);
-    consultationPhone.addEventListener('focus', mask, false);
-    consultationPhone.addEventListener('blur', mask, false);
+    consultationPhone.addEventListener('input', setMask, false);
+    consultationPhone.addEventListener('focus', setMask, false);
+    consultationPhone.addEventListener('blur', setMask, false);
   }
 
   if (modalConsultationPhone) {
-    modalConsultationPhone.addEventListener('input', mask, false);
-    modalConsultationPhone.addEventListener('focus', mask, false);
-    modalConsultationPhone.addEventListener('blur', mask, false);
+    modalConsultationPhone.addEventListener('input', setMask, false);
+    modalConsultationPhone.addEventListener('focus', setMask, false);
+    modalConsultationPhone.addEventListener('blur', setMask, false);
   }
 })();
 
@@ -107,6 +116,7 @@
   const modal = document.querySelector('.modal');
   const consultationButton = document.querySelector('.page-header__button');
   const modalForm = document.querySelector('.modal-consultation__form');
+  const modalOverlay = document.querySelector('.modal__overlay');
   const pageBody = document.querySelector('body');
   const storage = window.localStorage;
 
@@ -114,9 +124,9 @@
     evt.preventDefault();
     if (item) {
       item.classList.add('modal--open');
+      modalOverlay.classList.add('lock');
       pageBody.classList.add('lock');
       const closeModalButton = item.querySelector('.modal__close-button');
-      const modalOverlay = pageBody;
       const nameField = item.querySelector('.modal-consultation__field--name input');
       const phoneField = item.querySelector('.modal-consultation__field--phone input');
       const messageField = item.querySelector('.modal-consultation__field--question textarea');
@@ -137,7 +147,6 @@
   const closeModal = function () {
     modal.classList.remove('modal--open');
     pageBody.classList.remove('lock');
-    const modalOverlay = modal.querySelector('.lock');
     const closeModalButton = modal.querySelector('.modal__close-button');
     closeModalButton.removeEventListener('click', onCloseButtonPress);
     modalOverlay.removeEventListener('click', onOverlayClick);
