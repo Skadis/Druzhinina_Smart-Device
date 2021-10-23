@@ -7,65 +7,65 @@
   const contacts = document.querySelector('.contacts');
   const contactsButton = contacts.querySelector('.contacts__toggle');
   const consultationButton = document.querySelector('.main-screen__link');
-  const scrollSection = document.querySelector('.consultation');
-  const contactsCloseClass = 'contacts--close';
-  const contactsOpenClass = 'contacts--open';
-  const navCloseClass = 'nav--close';
-  const navOpenClass = 'nav--open';
+  const CONTACTS_CLOSE_CLASS = 'contacts--close';
+  const CONTACTS_OPEN_CLASS = 'contacts--open';
+  const NAV_CLOSE_CLASS = 'nav--close';
+  const NAV_OPEN_CLASS = 'nav--open';
 
   navigation.classList.remove('nav--no-js');
   contacts.classList.remove('contacts--no-js');
-  navigation.classList.add(navCloseClass);
-  contacts.classList.add(contactsCloseClass);
+  navigation.classList.add(NAV_CLOSE_CLASS);
+  contacts.classList.add(CONTACTS_CLOSE_CLASS);
 
-  navigationButton .addEventListener('click', () => {
-    if (navigation.classList.contains(navCloseClass) && contacts.classList.contains(contactsOpenClass)) {
-      navigation.classList.add(navOpenClass);
-      navigation.classList.remove(navCloseClass);
-      contacts.classList.add(contactsCloseClass);
-      contacts.classList.remove(contactsOpenClass);
-    } else if (navigation.classList.contains(navOpenClass)) {
-      navigation.classList.add(navCloseClass);
-      navigation.classList.remove(navOpenClass);
+  navigationButton.addEventListener('click', () => {
+    if (navigation.classList.contains(NAV_CLOSE_CLASS) && contacts.classList.contains(CONTACTS_OPEN_CLASS)) {
+      navigation.classList.add(NAV_OPEN_CLASS);
+      navigation.classList.remove(NAV_CLOSE_CLASS);
+      contacts.classList.add(CONTACTS_CLOSE_CLASS);
+      contacts.classList.remove(CONTACTS_OPEN_CLASS);
+    } else if (navigation.classList.contains(NAV_OPEN_CLASS)) {
+      navigation.classList.add(NAV_CLOSE_CLASS);
+      navigation.classList.remove(NAV_OPEN_CLASS);
     } else {
-      navigation.classList.add(navOpenClass);
-      navigation.classList.remove(navCloseClass);
+      navigation.classList.add(NAV_OPEN_CLASS);
+      navigation.classList.remove(NAV_CLOSE_CLASS);
     }
   });
 
   contactsButton.addEventListener('click', () => {
-    if (navigation.classList.contains(navOpenClass) && contacts.classList.contains(contactsCloseClass)) {
-      navigation.classList.add(navCloseClass);
-      navigation.classList.remove(navOpenClass);
-      contacts.classList.add(contactsOpenClass);
-      contacts.classList.remove(contactsCloseClass);
-    } else if (contacts.classList.contains(contactsOpenClass)) {
-      contacts.classList.add(contactsCloseClass);
-      contacts.classList.remove(contactsOpenClass);
+    if (navigation.classList.contains(NAV_OPEN_CLASS) && contacts.classList.contains(CONTACTS_CLOSE_CLASS)) {
+      navigation.classList.add(NAV_CLOSE_CLASS);
+      navigation.classList.remove(NAV_OPEN_CLASS);
+      contacts.classList.add(CONTACTS_OPEN_CLASS);
+      contacts.classList.remove(CONTACTS_CLOSE_CLASS);
+    } else if (contacts.classList.contains(CONTACTS_OPEN_CLASS)) {
+      contacts.classList.add(CONTACTS_CLOSE_CLASS);
+      contacts.classList.remove(CONTACTS_OPEN_CLASS);
     } else {
-      contacts.classList.add(contactsOpenClass);
-      contacts.classList.remove(contactsCloseClass);
+      contacts.classList.add(CONTACTS_OPEN_CLASS);
+      contacts.classList.remove(CONTACTS_CLOSE_CLASS);
     }
-
   });
 
-  if (scrollSection) {
-    consultationButton.addEventListener('click', (event) => {
+  consultationButton.addEventListener('click', (event) => {
+    const scrollSection = document.querySelector('.consultation');
+
+    if (scrollSection) {
       const linkID = document.querySelector(consultationButton.getAttribute('href'));
       event.preventDefault();
       linkID.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
-    });
-  }
+    }
+  });
 })();
 
 (function () {
 
   const consultationPhone = document.querySelector('.consultation__field--phone input');
   const modalConsultationPhone = document.querySelector('.modal-consultation__field--phone input');
-  const matrix = '+7 (___) ___ ____';
+  const MATRIX = '+7 (___) ___ ____';
 
   function setCursorPosition(pos, el) {
     el.focus();
@@ -74,12 +74,12 @@
 
   function setMask(event) {
     let i = 0;
-    const def = matrix.replace(/\D/g, '');
+    const def = MATRIX.replace(/\D/g, '');
     let val = event.target.value.replace(/\D/g, '');
     if (def.length >= val.length) {
       val = def;
     }
-    event.target.value = matrix.replace(/./g, function (a) {
+    event.target.value = MATRIX.replace(/./g, function (a) {
       if (/[_\d]/.test(a) && i < val.length) {
         return val.charAt(i++);
       } else {

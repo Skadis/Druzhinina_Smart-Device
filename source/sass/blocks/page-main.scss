@@ -3,16 +3,18 @@
 }
 
 .page-main__triangle-bg {
-  background-image: url("../img/triangles-bg.png");
-  background-position: 1px -30px;
+  background-image: url("../img/triangles-bg-desktop.svg");
+  background-position: -62px -30px;
   overflow: hidden;
   z-index: -10;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/triangles-bg@2x.png");
-  }
+  background-repeat: no-repeat;
 
   @media (max-width: $tablet-max-width) {
-    background-image: none;
+    background-image: url("../img/triangles-bg-tablet.svg");
+    background-position: 211px 90px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    background-position: -120px 653px;
   }
 }

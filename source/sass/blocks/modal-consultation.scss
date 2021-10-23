@@ -3,7 +3,7 @@
   background-color: $blue;
   max-width: 490px;
   height: 605px;
-  top: -309px;
+  top: -26%;
   padding-top: 31px;
   padding-left: 39px;
   margin: auto;
@@ -101,6 +101,7 @@
 .modal-consultation__field--question textarea {
   padding-top: 10px;
   height: 104px;
+  resize: none;
 }
 
 .modal-consultation__field--question {
