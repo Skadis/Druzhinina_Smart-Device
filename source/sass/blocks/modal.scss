@@ -16,12 +16,16 @@
 .modal--open .modal__close-button {
   position: absolute;
   top: 19px;
-  right: 10px;
+  right: 18px;
   width: 20px;
   height: 20px;
   border: 0;
   cursor: pointer;
   background-color: transparent;
+
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
 .modal--open .modal__close-button::before,
@@ -31,7 +35,7 @@
   height: 1px;
   position: absolute;
   top: 10px;
-  left: -11px;
+  left: -4px;
   background-color: $white;
 }
 

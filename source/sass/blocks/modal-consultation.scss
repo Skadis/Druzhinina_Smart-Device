@@ -3,13 +3,17 @@
   background-color: $blue;
   max-width: 490px;
   height: 605px;
-  top: -26%;
+  top: -201px;
   padding-top: 31px;
   padding-left: 39px;
   margin: auto;
   right: 0;
   bottom: 0;
   left: -1px;
+
+  @media (max-width: $desktop-container-width) {
+    top: 0;
+  }
 }
 
 .modal-consultation h2 {
@@ -52,6 +56,7 @@
   padding-left: 25px;
   padding-bottom: 18px;
   width: 100%;
+  line-height: 22px;
 
   &::placeholder {
     font-family: $font;

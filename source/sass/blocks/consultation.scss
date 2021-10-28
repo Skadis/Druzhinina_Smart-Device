@@ -20,10 +20,14 @@
 }
 
 .consultation__wrapper {
-  padding-left: 38.1%;
+  padding-left: 732px;
   padding-top: 92px;
   padding-right: 103px;
   padding-bottom: 113px;
+
+  @media (max-width: $desktop-container-width) {
+    padding-left: 377px;
+  }
 
   @media (max-width: $tablet-max-width) {
     padding-left: 89px;
@@ -111,6 +115,7 @@
   padding-left: 16px;
   padding-bottom: 18px;
   width: 100%;
+  line-height: 22px;
 
   &::placeholder {
     font-family: $font;

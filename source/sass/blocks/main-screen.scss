@@ -29,7 +29,7 @@
 .main-screen__img {
   position: absolute;
   top: 258px;
-  right: 177px;
+  right: -64px;
 
   @media (max-width: $desktop-max-width) {
     top: 30%;
@@ -86,6 +86,32 @@
 .main-screen__wrapper {
   padding-top: 315px;
   padding-bottom: 275px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 671px;
+    height: 641px;
+    background: url("../img/main-screen-triangle.svg") no-repeat;
+    top: 120px;
+    right: -21px;
+
+    @media (max-width: $tablet-max-width) {
+      width: 500px;
+      height: 503px;
+      top: -38px;
+      right: -173px;
+      background-size: cover;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      width: 500px;
+      height: 485px;
+      top: -48px;
+      right: -332px;
+    }
+  }
 
   @media (max-width: $tablet-max-width) {
     padding-top: 189px;

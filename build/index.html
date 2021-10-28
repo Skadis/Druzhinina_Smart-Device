@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="nofollow">
+  <meta name="description" content="Производство, монтаж, поставка комплектующих, блоков и модулей">
   <title>Smart Device - умные технологии</title>
   <link rel="preload" href="fonts/pt-mono.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/roboto-500.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/roboto-condensed-400.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/roboto-condensed-700.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css">
@@ -16,27 +17,32 @@
   <header class="page-header">
     <div class="page-header__wrapper container">
       <a class="logo logo--header">
-        <svg class="logo__image" width="52" height="52" aria-label="Логотип">
-          <use xlink:href="img/sprite.svg#logo"></use>
+        <svg class="logo__full" width="202" height="52">
+          <use xlink:href="img/sprite.svg#logo-header-full"></use>
         </svg>
-        <div class="logo__text">
-          <span class="logo__title">Smart Device</span>
-          <span class="logo__subtitle">умные технологии</span>
-        </div>
+        <svg class="logo__mobile" width="38" height="38">
+          <use xlink:href="img/sprite.svg#logo-mobile"></use>
+        </svg>
       </a>
       <div class="page-header__contacts">
-        <a class="page-header__link page-header__link--mail" href="mailto:info@sd.ru">
-          <svg class="page-header__icon" width="19" height="14" aria-label="Электронная почта">
-            <use xlink:href="img/sprite.svg#mail-icon"></use>
-          </svg>
-          <span class="page-header__link-text">info@sd.ru</span>
-        </a>
-        <a class="page-header__link page-header__link--phone" href="tel:+74950005252">
-          <svg class="page-header__icon" width="18" height="18" aria-label="Номер телефона">
-            <use xlink:href="img/sprite.svg#phone-icon"></use>
-          </svg>
-          <span class="page-header__link-text">+7 (495) 000 52 52</span>
-        </a>
+        <ul class="page-header__list">
+          <li class="page-header__item">
+            <a class="page-header__link page-header__link--mail" href="mailto:info@sd.ru">
+              <svg class="page-header__icon" width="19" height="14" aria-label="Электронная почта">
+                <use xlink:href="img/sprite.svg#mail-icon"></use>
+              </svg>
+              <span class="page-header__link-text">info@sd.ru</span>
+            </a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link page-header__link--phone" href="tel:+74950005252">
+              <svg class="page-header__icon" width="18" height="18" aria-label="Номер телефона">
+                <use xlink:href="img/sprite.svg#phone-icon"></use>
+              </svg>
+              <span class="page-header__link-text">+7 (495) 000 52 52</span>
+            </a>
+          </li>
+        </ul>
         <button class="page-header__button" type="button">Заказать звонок</button>
       </div>
     </div>
@@ -69,28 +75,28 @@
           <ul class="features__list">
             <li class="features__item features__item--operational">
               <svg class="features__icon" width="29" height="35">
-                <use xlink:href="/img/sprite.svg#operational-terms"></use>
+                <use xlink:href="img/sprite.svg#operational-terms"></use>
               </svg>
               <h3>Оперативные сроки</h3>
               <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
             </li>
             <li class="features__item features__item--providers">
               <svg class="features__icon" width="35" height="35">
-                <use xlink:href="/img/sprite.svg#providers"></use>
+                <use xlink:href="img/sprite.svg#providers"></use>
               </svg>
               <h3>Крупные поставщики</h3>
               <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
             </li>
             <li class="features__item features__item--confidentiality">
               <svg class="features__icon" width="36" height="31">
-                <use xlink:href="/img/sprite.svg#confidentiality"></use>
+                <use xlink:href="img/sprite.svg#confidentiality"></use>
               </svg>
               <h3>Полная конфиденциальность</h3>
               <p>По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
             </li>
             <li class="features__item features__item--price">
               <svg class="features__icon" width="35" height="35">
-                <use xlink:href="/img/sprite.svg#price"></use>
+                <use xlink:href="img/sprite.svg#price"></use>
               </svg>
               <h3>Персонализация стоимости</h3>
               <p>Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
@@ -139,15 +145,15 @@
         <p>Мы проконсультируем Вас бесплатно</p>
         <form method="POST" action="https://echo.htmlacademy.ru" class="consultation__form">
           <div class="consultation__field consultation__field--name">
-            <input type="text" id="name" placeholder="Имя" required="">
+            <input type="text" id="name" name="name" placeholder="Имя" required="">
             <label class="visually-hidden" for="name">Имя</label>
           </div>
           <div class="consultation__field consultation__field--phone">
-            <input type="tel" id="phone" placeholder="Телефон" pattern="^[0-9]+$" required="">
+            <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}\s\d{4}" required="">
             <label class="visually-hidden" for="phone">Номер телефона</label>
           </div>
           <div class="consultation__field consultation__field--question">
-            <textarea id="question" cols="30" rows="1" placeholder="Ваш вопрос" required=""></textarea>
+            <textarea id="question" cols="30" rows="1" name="question" placeholder="Ваш вопрос" required=""></textarea>
             <label class="visually-hidden" for="question">Ваш вопрос</label>
           </div>
           <button type="submit" class="consultation__button">Задать вопрос</button>
@@ -166,13 +172,9 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__about">
           <a class="page-footer__logo logo">
-            <svg class="logo__image" width="52" height="52" aria-label="Логотип">
-              <use xlink:href="img/sprite.svg#logo"></use>
+            <svg class="logo__image" width="216" height="52" aria-label="Логотип">
+              <use xlink:href="img/sprite.svg#logo-footer"></use>
             </svg>
-            <div class="logo__text">
-              <span class="logo__title logo__title--dark">Service Device</span>
-              <span class="logo__subtitle">умные технологии</span>
-            </div>
           </a>
           <span class="page-footer__copyright-top">1999-2018 SD Service Devices</span>
           <ul class="page-footer__social social">
@@ -266,15 +268,15 @@
 
         <form method="POST" action="https://echo.htmlacademy.ru">
           <div class="modal-consultation__field modal-consultation__field--name">
-            <input type="text" id="modal-name" placeholder="Имя" required="">
+            <input type="text" id="modal-name" name="name" placeholder="Имя" required="">
             <label class="visually-hidden" for="modal-name">Имя</label>
           </div>
           <div class="modal-consultation__field modal-consultation__field--phone">
-            <input type="tel" id="modal-phone" placeholder="Телефон" pattern="^[0-9]+$" required="">
+            <input type="tel" id="modal-phone" name="phone" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}\s\d{4}" required="">
             <label class="visually-hidden" for="modal-phone">Номер телефона</label>
           </div>
           <div class="modal-consultation__field modal-consultation__field--question">
-            <textarea id="modal-question" cols="30" rows="1" placeholder="Ваш вопрос" required=""></textarea>
+            <textarea id="modal-question" cols="30" rows="1" name="question" placeholder="Ваш вопрос" required=""></textarea>
             <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
           </div>
           <button type="submit" class="modal-consultation__button">Отправить</button>
@@ -287,6 +289,7 @@
     </div>
   </section>
 
+<script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -43,7 +43,8 @@
   @include clear-list;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 125px;
+  justify-content: center;
+  padding-left: 0;
 
   @media (max-width: $tablet-max-width) {
     flex-direction: column;
@@ -62,6 +63,10 @@
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  @media (max-width: $desktop-container-width) {
+    width: 31.3%;
   }
 
   @media (max-width: $tablet-max-width) {

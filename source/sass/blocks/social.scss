@@ -1,6 +1,8 @@
 .social {
   @include clear-list;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 210px;
 }
 
 .social__item:not(:last-of-type) {

@@ -118,6 +118,7 @@
   const modalForm = document.querySelector('.modal-consultation__form');
   const modalOverlay = document.querySelector('.modal__overlay');
   const pageBody = document.querySelector('body');
+  const focusManagerLib = focusManager; // eslint-disable-line
   const storage = window.localStorage;
 
   const openModal = function (item, evt) {
@@ -126,6 +127,7 @@
       item.classList.add('modal--open');
       modalOverlay.classList.add('lock');
       pageBody.classList.add('lock');
+      focusManagerLib.capture(modal);
       const closeModalButton = item.querySelector('.modal__close-button');
       const nameField = item.querySelector('.modal-consultation__field--name input');
       const phoneField = item.querySelector('.modal-consultation__field--phone input');
@@ -150,7 +152,7 @@
     const closeModalButton = modal.querySelector('.modal__close-button');
     closeModalButton.removeEventListener('click', onCloseButtonPress);
     modalOverlay.removeEventListener('click', onOverlayClick);
-
+    focusManagerLib.release(modal);
     window.removeEventListener('keydown', onEscKeyPress);
   };
 
