@@ -4,6 +4,10 @@
 
 .logo--header {
   margin-left: 3px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-right: 13px;
+  }
 }
 
 .logo__full {

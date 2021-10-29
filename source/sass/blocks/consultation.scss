@@ -1,7 +1,14 @@
 .consultation {
   background-color: $blue;
+}
+
+.consultation__wrapper {
+  padding-left: 732px;
+  padding-top: 92px;
+  padding-right: 103px;
+  padding-bottom: 113px;
   background-image: url("../img/consultation-bg.png");
-  background-position: 175px -59px;
+  background-position: -66px -60px;
   background-repeat: no-repeat;
 
   @media (min-resolution: 2dppx) {
@@ -11,22 +18,11 @@
 
   @media (max-width: $desktop-max-width) {
     background-position: 0 50%;
-    background-size: 97%;
+    background-size: 96%;
   }
-
-  @media (max-width: $tablet-max-width) {
-    background-image: none;
-  }
-}
-
-.consultation__wrapper {
-  padding-left: 732px;
-  padding-top: 92px;
-  padding-right: 103px;
-  padding-bottom: 113px;
 
   @media (max-width: $desktop-container-width) {
-    padding-left: 377px;
+    padding-left: 38%;
   }
 
   @media (max-width: $tablet-max-width) {
@@ -34,6 +30,7 @@
     padding-top: 80px;
     padding-right: 50px;
     padding-bottom: 103px;
+    background-image: none;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -247,4 +244,8 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+.consultation__personal-data input:focus + label {
+  opacity: 0.5;
 }

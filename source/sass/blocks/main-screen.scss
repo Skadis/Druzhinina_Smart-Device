@@ -37,9 +37,9 @@
   }
 
   @media (max-width: $desktop-container-width) {
-    right: -209px;
-    width: 468px;
-    height: 430px;
+    width: 45%;
+    height: auto;
+    right: 0;
   }
 
   @media (max-width: $tablet-max-width) {
@@ -68,10 +68,15 @@
   margin-top: 0;
   margin-bottom: 27px;
 
+  @media (max-width: $desktop-container-width) {
+    max-width: 59%;
+  }
+
   @media (max-width: $tablet-max-width) {
     font-size: 60px;
     line-height: 70px;
     width: 60%;
+    max-width: none;
   }
 
   @media (max-width: $mobile-max-width) {

@@ -1,19 +1,13 @@
 .modal-consultation__wrapper {
-  position: fixed;
+  position: absolute;
   background-color: $blue;
   max-width: 490px;
-  height: 605px;
-  top: -201px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding-top: 31px;
   padding-left: 39px;
-  margin: auto;
-  right: 0;
-  bottom: 0;
-  left: -1px;
-
-  @media (max-width: $desktop-container-width) {
-    top: 0;
-  }
+  padding-bottom: 19px;
 }
 
 .modal-consultation h2 {
@@ -134,6 +128,10 @@
     top: 2px;
     left: -33px;
   }
+}
+
+.modal-consultation__personal-data input:focus + label {
+  opacity: 0.5;
 }
 
 .modal-consultation__personal-data input:checked + label::after {
