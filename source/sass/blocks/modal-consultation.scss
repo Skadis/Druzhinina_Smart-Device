@@ -145,6 +145,10 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  @media (max-width: $tablet-max-width) {
+    left: -30px;
+  }
 }
 
 .modal-consultation__personal-data {
